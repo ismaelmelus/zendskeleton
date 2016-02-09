@@ -90,7 +90,8 @@ return array(
             'Application\Controller\Index' => Controller\IndexController::class,
         		'Application\Controller\Galileo' => Controller\GalileoController::class,
         		'Application\Controller\Arduino' => Controller\ArduinoController::class,
-        		'Application\Controller\Newlayout' => Controller\NewlayoutController::class
+        		'Application\Controller\Newlayout' => Controller\NewlayoutController::class,
+        		'Application\Controller\Formulario' => Controller\FormularioController::class
         ),
     ),
     'view_manager' => array(
