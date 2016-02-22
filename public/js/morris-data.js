@@ -1,62 +1,63 @@
 $(function() {
 
-    Morris.Area({
-        element: 'morris-area-chart',
+    Morris.Line({
+        element: 'morris-line-chart',
+        //data: JSON.parse('<?php echo json_encode($data) ?>'),
         data: [{
-            period: '2010 Q1',
-            iphone: 2666,
-            ipad: null,
-            itouch: 2647
+        	x: '2013-03-30 22:00:00',
+            today: 26,
+            yesterday: null,
+            before_yesterday: 27
         }, {
-            period: '2010 Q2',
-            iphone: 2778,
-            ipad: 2294,
-            itouch: 2441
+        	x: '2013-03-30 22:10:00',
+            today: 27,
+            yesterday: 22,
+            before_yesterday: 24
         }, {
-            period: '2010 Q3',
-            iphone: 4912,
-            ipad: 1969,
-            itouch: 2501
+        	x: '2013-03-30 22:20:00',
+            today: 22,
+            yesterday: 19,
+            before_yesterday: 25
         }, {
-            period: '2010 Q4',
-            iphone: 3767,
-            ipad: 3597,
-            itouch: 5689
+        	x: '2013-03-30 22:30:00',
+            today: 37,
+            yesterday: 35,
+            before_yesterday: 29
         }, {
-            period: '2011 Q1',
-            iphone: 6810,
-            ipad: 1914,
-            itouch: 2293
+        	x: '2013-03-30 22:40:00',
+            today: 20,
+            yesterday: 19,
+            before_yesterday: 22
         }, {
-            period: '2011 Q2',
-            iphone: 5670,
-            ipad: 4293,
-            itouch: 1881
+        	x: '2013-03-30 22:50:00',
+            today: 20,
+            yesterday: 23,
+            before_yesterday: 18
         }, {
-            period: '2011 Q3',
-            iphone: 4820,
-            ipad: 3795,
-            itouch: 1588
+        	x: '2013-03-30 23:00:00',
+            today: 28,
+            yesterday: 35,
+            before_yesterday: 28
         }, {
-            period: '2011 Q4',
-            iphone: 15073,
-            ipad: 5967,
-            itouch: 5175
+        	x: '2013-03-30 23:10:00',
+            today: 13,
+            yesterday: 27,
+            before_yesterday: 25
         }, {
-            period: '2012 Q1',
-            iphone: 10687,
-            ipad: 4460,
-            itouch: 2028
+        	x: '2013-03-30 23:20:00',
+            today: 07,
+            yesterday: 20,
+            before_yesterday: 28
         }, {
-            period: '2012 Q2',
-            iphone: 8432,
-            ipad: 5713,
-            itouch: 1791
+        	x: '2013-03-30 23:30:00',
+            today: 22,
+            yesterday: 13,
+            before_yesterday: 11
         }],
-        xkey: 'period',
-        ykeys: ['iphone', 'ipad', 'itouch'],
-        labels: ['iPhone', 'iPad', 'iPod Touch'],
-        pointSize: 2,
+        xkey: 'x',
+        ykeys: ['today', 'yesterday', 'before_yesterday'],
+        labels: ['today', 'yesterday', 'before_yesterday'],
+        pointSize: 4,
         hideHover: 'auto',
         resize: true
     });
