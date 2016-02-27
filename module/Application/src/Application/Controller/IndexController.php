@@ -25,14 +25,31 @@ class IndexController extends AbstractActionController
         return new ViewModel();
     }
 
-    public function modelAction(){
-    	
+    public function modelAction()
+    {	
     	$modelo = new Modelo("Envío texto desde el controller al modelo y luego lo devuelvo y lo muestro");
     	$text = $modelo->getText();
     	$a = $modelo->getArray();
     	$desdemodelo = $modelo->desdeElController();
     	
     	return new ViewModel(array('texto'=>$text,'miarray'=>$a,'desdemodelo'=>$desdemodelo));
+    }
+    
+    
+    public function morrislineAction()
+    {
+    	//Llamo a la vista index con el layout newlayout
+    	$view = new ViewModel();
+    	$this->layout('layout/datajasonlayout');
+    	//saludo no funciona a traves del layout y title tampoco
+    	
+    	//CREAR MODELO DE DATOS Y PASARLO
+    	
+    	
+    	$saludo = array(1=>"hola estoy pasando parametros a la vista a traves del layout");
+    	$this->layout()->$saludo;
+    	$this->layout()->$title="Mi nuevo title";
+    	return $view;
     }
     
     
