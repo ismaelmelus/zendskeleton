@@ -12,10 +12,15 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
 use Application\Model\Entity\Modelo;
+use Zend\Db\Adapter\Adapter;
+use Zend\Db\Sql\Sql;
+use Zend\Db\ResultSet\ResulSet;
 
 
 class IndexController extends AbstractActionController
 {
+	
+	public $dbAdapter;
 	
 	public function __construct(){
 		
@@ -52,5 +57,31 @@ class IndexController extends AbstractActionController
     	return $view;
     }
     
+    //ZEND DB RESULTSET
+    public function resultAction(){
+    	$this->dbAdapter = $this->getServiceLocator()->get('Zend\Db\Adapter\Adapter');
+    	$text = "Conexion a base de datos con ResulSet";
+		$res= $this->dbAdapter->query("SELECT * FROM Heat",adapter::QUERY_MODE_EXECUTE);
+		$result = $res->toArray();
+    	return new ViewModel(array('texto'=>$text,'result'=>$result));
+    }
+    
+    //ZEND DB SQL osea con métodos
+    public function sqlAction(){
+	
+    	$this->dbAdapter = $this->getServiceLocator()->get('Zend\Db\Adapter\Adapter');
+    	$sql = new Sql($this->dbAdapter);
+    	$text = "Conexion a base de datos con Sql";
+    	$select = $sql->select()
+    				  ->from('Heat')
+    				  ->where(array('id'=>2))
+    				  ->order('id DESC');
+    	//		$select->where(array('id' => 2));	
+    	$selectString = $sql->buildSqlString($select);
+		//     	echo $selectString;
+    	$result = $this->dbAdapter->query($selectString, Adapter::QUERY_MODE_EXECUTE);
+    
+    	return new ViewModel(array('texto'=>$text,'result'=>$result));
+    }
     
 }
