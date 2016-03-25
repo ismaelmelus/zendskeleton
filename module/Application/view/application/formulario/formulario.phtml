@@ -38,7 +38,20 @@
 
     </div>
     <br />
+<<<<<<< HEAD
     
+=======
+       <div class="form_element">
+    <?php
+    $pass = $form->get('pass');
+    echo $formLabel->openTag() . $pass->getLabel('label');
+    echo $this->formInput($pass);
+    echo $this->formElementErrors($pass);
+    echo $formLabel->closeTag();
+    ?></div>
+
+    </div> 
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
         <div class="form_element">
     <?php
     $email = $form->get('email');
@@ -47,13 +60,108 @@
     echo $this->formElementErrors($email);
     echo $formLabel->closeTag();
     ?></div>
+<<<<<<< HEAD
     <?php  echo $this->formElement($form->get('security'));?>
     <?php  echo $this->formElement($form->get('send'));?>
     <?php $this->form()->closeTag(); ?> 
+=======
+    
+    
+            <div class="form_element">
+    <?php
+    $gender = $form->get('gender');
+    echo $formLabel->openTag() . $gender->getLabel('gender');
+    echo $this->formRadio($gender);
+    echo $this->formElementErrors($gender);
+    echo $formLabel->closeTag();
+    ?></div>
+    
+    
+<div class="form_element">
+    <?php
+    $language = $form->get('language');
+    echo $formLabel->openTag() . $language->getLabel('language');
+    echo $this->formSelect($language);
+    echo $this->formElementErrors($language);
+    echo $formLabel->closeTag();
+    ?></div>
+    
+    
+    
+<div class="form_element">
+    <?php
+    $multiple = $form->get('multiple');
+    echo $formLabel->openTag() . $multiple->getLabel('multiple');
+    echo $this->formSelect($multiple);
+    echo $this->formElementErrors($multiple);
+    echo $formLabel->closeTag();
+    ?></div>
+
+<div class="form_element">
+    <?php
+    $selectvacio = $form->get('selectvacio');
+    echo $formLabel->openTag() . $multiple->getLabel('selectvacio');
+    echo $this->formSelect($selectvacio);
+    echo $this->formElementErrors($selectvacio);
+    echo $formLabel->closeTag();
+    ?></div>
+ 
+     
+    <?php  echo $this->formElement($form->get('security'));?>
+    <?php  echo $this->formElement($form->get('send'));?>
+    <?php $this->form()->closeTag(); ?> 
+    </div>
+    
+	<br />    
+  <div class="form-element">
+        <?php $fileElement = $form->get('image-file'); ?>
+        <?php echo $this->formLabel($fileElement); ?>
+        <?php echo $this->formFile($fileElement); ?>
+        <?php echo $this->formElementErrors($fileElement); ?>
+    </div>
+
+    <button>Submit</button>
+
+
+	<br />
+    
+    <!-- OCULTOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOO -->
+    <div class="form_element">
+    <?php
+    echo $this->formElement($form->get('oculto'));
+    ?></div>    
+    <?php echo $this->form()->closeTag(); ?>
+    
+    
+    <div class="form_element">
+    <?php
+    $check = $form->get('check');
+    echo $formLabel->openTag() . $check->getLabel('check');
+    echo $this->formCheckbox($check);
+    echo $this->formElementErrors($check);
+    echo $formLabel->closeTag();
+    ?></div>
+    
+    <div class="form_element">
+    <?php
+    $mcheck = $form->get('mcheck');
+    echo $formLabel->openTag() . $check->getLabel('mcheck');
+    echo $this->formMultiCheckbox($mcheck);
+    echo $this->formElementErrors($mcheck);
+    echo $formLabel->closeTag();
+    ?></div>
+    
+    
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
     <h1><?php echo sprintf($this->translate('Welcome to %sMain Control Home%s'), '<span class="zf-green">', '</span>') ?></h1>
     <p><?php echo sprintf($this->translate('Congratulations! From Here you can cofigurate %sAir & Heat of home%s with Zend Framework 2%s. This skeleton can serve as a simple starting point for you to begin building your application on ZF2.'), '<a href="https://github.com/zendframework/ZendSkeletonApplication" target="_blank">', '</a>', \Zend\Version\Version::VERSION) ?></p>
     <p><a class="btn btn-success btn-lg" href="https://github.com/zendframework/zf2" target="_blank"><?php echo $this->translate('Reset Galileo or Arduin if are blocked') ?> &raquo;</a></p>
 </div>
+<<<<<<< HEAD
+=======
+<br />
+
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
 
 <div class="row">
 

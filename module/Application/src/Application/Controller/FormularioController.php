@@ -30,7 +30,13 @@ class FormularioController extends AbstractActionController
     public function formularioAction(){
     	
     	$form = new Formulario("Mi_formulario");
+<<<<<<< HEAD
     	
+=======
+    	$form ->get('selectvacio')->setValueOptions(array('0'=>'Op0','1'=>'Op1','3'=>'Op3'));
+    	$form ->get('oculto')->setAttribute("value","0");
+    	$form ->get('mcheck')->setValueOptions(array('0'=>'Op0','1'=>'Op1','3'=>'Op3'));
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
     	return new ViewModel(array('texto'=>"Formulario en ZendFramework",'form' => $form,'url'=> $this->getRequest()->getBaseUrl()));
     }
     

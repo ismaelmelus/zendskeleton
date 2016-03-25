@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(function() {
 
     Morris.Area({
@@ -59,6 +60,25 @@ $(function() {
         pointSize: 2,
         hideHover: 'auto',
         resize: true
+=======
+//This is jQuery........jQuery.getJSON()
+$.getJSON("/js/data.php").done(function(json){
+
+    Morris.Line({
+	        element: 'morris-line-chart',
+	        data: json,
+	        parseTime: false,
+	        xkey: 'created_at',
+	        ykeys: ['temp'],
+	        lineColors: ['#090217']  ,   
+	        labels: ['Temperature'],
+	        pointSize: 4,
+	        hideHover: 'auto',
+	        resize: true,
+	        lineColors: ['#0969A2'],
+	        pointFillColors: ['#112222']
+    		//colors: ['#112222','#112222','#112222','#112222','#112222'] igual al numero de puntos
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
     });
 
     Morris.Donut({
@@ -78,6 +98,7 @@ $(function() {
 
     Morris.Bar({
         element: 'morris-bar-chart',
+<<<<<<< HEAD
         data: [{
             y: '2006',
             a: 100,
@@ -110,6 +131,12 @@ $(function() {
         xkey: 'y',
         ykeys: ['a', 'b'],
         labels: ['Series A', 'Series B'],
+=======
+        data: json,
+        xkey: 'created_at',
+        ykeys: ['id', 'temp'],
+        labels: ['Serie A', 'Serie B'],
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
         hideHover: 'auto',
         resize: true
     });

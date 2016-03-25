@@ -87,14 +87,10 @@ return array(
     ),
     'controllers' => array(
         'invokables' => array(
-<<<<<<< HEAD
             'Newapplication\Controller\Index' => Controller\IndexController::class,
         		'Newapplication\Controller\Galileo' => Controller\GalileoController::class,
         		'Newapplication\Controller\Arduino' => Controller\ArduinoController::class,
         		'Newapplication\Controller\Newlayout' => Controller\NewlayoutController::class
-=======
-            'Newapplication\Controller\Index' => Controller\IndexController::class
->>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
         ),
     ),
     'view_manager' => array(

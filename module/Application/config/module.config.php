@@ -55,7 +55,11 @@ return array(
                             'defaults' => array(
                             		//Le digo que cuando ha paso el parametro id está asociado al controlador galileo y ademas digo que tiene que ser de 0 a 9
                             		'__NAMESPACE__' => 'Application\Controller',
+<<<<<<< HEAD
                             		'controller'    => 'galileo',
+=======
+                            		'controller'    => 'raspberry',
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
                             		'action'        => 'index',
                             		'id'			=>	'[0-9]*',
                             		'id2'			=>	'[a-z]*',
@@ -88,7 +92,11 @@ return array(
     'controllers' => array(
         'invokables' => array(
             'Application\Controller\Index' => Controller\IndexController::class,
+<<<<<<< HEAD
         		'Application\Controller\Galileo' => Controller\GalileoController::class,
+=======
+        		'Application\Controller\Raspberry' => Controller\RaspberryController::class,
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
         		'Application\Controller\Arduino' => Controller\ArduinoController::class,
         		'Application\Controller\Newlayout' => Controller\NewlayoutController::class,
         		'Application\Controller\Formulario' => Controller\FormularioController::class

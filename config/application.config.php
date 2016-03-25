@@ -18,7 +18,11 @@
 return array(
     // This should be an array of module namespaces used in the application.
     'modules' => array(
+<<<<<<< HEAD
         'Newapplication',
+=======
+        'NewApplication',
+>>>>>>> 1ee0309ced54db0a77c33a684ea9e4c2c4eaf543
     	'Application',
     ),
 
